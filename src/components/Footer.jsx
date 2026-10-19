@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <nav aria-label={t.footer.navLabel} className="grid gap-10 sm:grid-cols-3">
+        <nav aria-label={t.footer.navLabel} className="grid gap-10 sm:grid-cols-2">
           <Column title={t.footer.navLabel}>
             {LINKS.map(([key, href]) => (
               <li key={key}><a href={href}>{t.nav[key]}</a></li>
@@ -65,13 +65,6 @@ export default function Footer() {
             {t.services.items.map((item) => (
               <li key={item.title}><a href="#services">{item.title}</a></li>
             ))}
-          </Column>
-          <Column title={t.footer.contactLabel}>
-            <li>{t.contact.contactLabel}: {site.contactName}</li>
-            <li>{site.address}</li>
-            <li><a href={site.phoneTel}>{site.phoneDisplay}</a></li>
-            <li><a href={site.facebook} target="_blank" rel="noopener noreferrer">{t.contact.facebook}</a></li>
-            <li><a href={site.maps} target="_blank" rel="noopener noreferrer">{t.contact.directions}</a></li>
           </Column>
         </nav>
       </div>

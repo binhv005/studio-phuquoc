@@ -67,9 +67,7 @@ export const translations = {
     contact: {
       eyebrow: 'Liên hệ',
       title: 'Đặt Lịch Chụp Tại Phú Quốc',
-      contactLabel: 'Người liên hệ',
       call: 'Gọi điện',
-      facebook: 'Facebook',
       directions: 'Chỉ đường',
     },
     form: {
@@ -88,7 +86,7 @@ export const translations = {
       error: 'Gửi không thành công. Vui lòng thử lại hoặc gọi trực tiếp.',
       notConfigured: 'Biểu mẫu chưa được kết nối với dịch vụ nhận dữ liệu nên yêu cầu chưa được gửi. Vui lòng gọi điện hoặc nhắn qua Facebook.',
     },
-    footer: { tagline: 'Wedding & Travel Photography in Phu Quoc', about: 'Nhiếp ảnh cưới, cặp đôi, gia đình và du lịch tại Phú Quốc: những khoảnh khắc tự nhiên, tinh tế và giàu cảm xúc.', navLabel: 'Điều hướng', servicesLabel: 'Dịch vụ', contactLabel: 'Liên hệ', language: 'Ngôn ngữ', rights: 'Bảo lưu mọi quyền.' },
+    footer: { tagline: 'Wedding & Travel Photography in Phu Quoc', about: 'Nhiếp ảnh cưới, cặp đôi, gia đình và du lịch tại Phú Quốc: những khoảnh khắc tự nhiên, tinh tế và giàu cảm xúc.', navLabel: 'Điều hướng', servicesLabel: 'Dịch vụ', language: 'Ngôn ngữ', rights: 'Bảo lưu mọi quyền.' },
     cta: {
       title: 'Hãy Cùng Tạo Nên Những Kỷ Niệm Đáng Nhớ',
       text: 'Bạn đang lên kế hoạch cho bộ ảnh cưới, buổi chụp cặp đôi hoặc chuyến nghỉ dưỡng tại Phú Quốc? Hãy liên hệ với chúng tôi để trao đổi về ý tưởng và lịch chụp phù hợp.',
@@ -165,9 +163,7 @@ export const translations = {
     contact: {
       eyebrow: 'Contact',
       title: 'Book Your Session in Phu Quoc',
-      contactLabel: 'Contact person',
       call: 'Call Now',
-      facebook: 'Facebook',
       directions: 'Get Directions',
     },
     form: {
@@ -186,7 +182,7 @@ export const translations = {
       error: 'Something went wrong. Please try again or call us directly.',
       notConfigured: 'The form is not connected to a receiving service yet, so your inquiry has not been sent. Please call or message us on Facebook.',
     },
-    footer: { tagline: 'Wedding & Travel Photography in Phu Quoc', about: 'Wedding, couple, family and travel photography in Phu Quoc: natural, refined and heartfelt moments to keep.', navLabel: 'Navigate', servicesLabel: 'Services', contactLabel: 'Contact', language: 'Language', rights: 'All rights reserved.' },
+    footer: { tagline: 'Wedding & Travel Photography in Phu Quoc', about: 'Wedding, couple, family and travel photography in Phu Quoc: natural, refined and heartfelt moments to keep.', navLabel: 'Navigate', servicesLabel: 'Services', language: 'Language', rights: 'All rights reserved.' },
     cta: {
       title: "Let's Create Something Beautiful Together",
       text: 'Planning a wedding photoshoot, a couple session or a memorable island getaway? Get in touch to discuss your ideas and arrange a photography session in Phu Quoc.',
