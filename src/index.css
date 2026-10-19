@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@theme {
+  /* Bảng màu Studio Bin: tối giản, sang trọng, gợi biển và hoàng hôn Phú Quốc */
+  --color-ivory: #f8f6f1;
+  --color-soft-white: #fdfcf9;
+  --color-charcoal: #252525;
+  --color-warm-gray: #5e5a53;
+  --color-sand: #d8c5aa;
+  --color-sand-tint: #f0e9dd;
+  --color-line: #e4ddd0;
+  --color-gold: #d6a45d;
+  --color-gold-dark: #c08d47;
+  /* Vàng đậm cho chữ trên nền sáng (đủ tương phản) */
+  --color-gold-deep: #8a5f22;
+  --color-navy: #20364a;
+  --color-navy-dark: #172838;
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4.5rem;
+    overflow-x: clip;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+    overflow-x: clip;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-sand);
+    color: var(--color-charcoal);
+  }
+}
+
+/* Nút: viền mảnh, chữ in hoa giãn nhẹ kiểu editorial */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.7rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+  cursor: pointer;
+}
+.btn-solid { background: var(--color-gold); color: var(--color-charcoal); }
+.btn-solid:hover { background: var(--color-gold-dark); }
+.btn-light { border-color: rgba(255, 255, 255, 0.75); color: #fff; }
+.btn-light:hover { background: #fff; color: var(--color-charcoal); }
+.btn-white { background: var(--color-ivory); color: var(--color-charcoal); }
+.btn-white:hover { background: var(--color-gold); }
+.btn-outline { border-color: var(--color-charcoal); color: var(--color-charcoal); }
+.btn-outline:hover { background: var(--color-charcoal); color: var(--color-ivory); }
+
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-gold-deep);
+}
+
+/* Tiêu đề hero: dòng nghiêng nhỏ màu vàng hoàng hôn + dòng lớn serif kiểu tạp chí */
+.hero-kicker {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  /* kem sáng + bóng đậm để không chìm trên ảnh sáng */
+  color: #fff3d9;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55), 0 2px 22px rgba(0, 0, 0, 0.55);
+}
+.title-display {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35), 0 2px 26px rgba(0, 0, 0, 0.4);
+}
+
+/* Biến thể chữ vàng của title-display */
+.title-gold { color: var(--color-gold); }
+
+/* Hiệu ứng nhập từng chữ cho tiêu đề hero */
+@keyframes wordIn {
+  from { opacity: 0; transform: translateY(0.45em); filter: blur(6px); }
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+.word-in {
+  display: inline-block;
+  opacity: 0;
+  animation: wordIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+.hero-actions { animation: fadeUp 0.8s ease 1.9s both; }
+.hero-text { animation: fadeUp 0.8s ease 1.5s both; }
+
+/* Hero fade-in nhẹ */
+@keyframes heroFade {
+  from { opacity: 0; transform: scale(1.03); }
+  to { opacity: 1; transform: scale(1); }
+}
+.hero-img { animation: heroFade 1.6s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+@keyframes lbFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.lb-fade { animation: lbFade 0.3s ease both; }
+
+/* Form */
+.field {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: var(--color-soft-white);
+  padding: 0.8rem 1rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-charcoal);
+  border-radius: 0.5rem;
+}
+.field:focus { outline: none; border-color: var(--color-gold); box-shadow: 0 0 0 3px rgba(214, 164, 93, 0.35); }
+.field[aria-invalid="true"] { border-color: #b4553f; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
