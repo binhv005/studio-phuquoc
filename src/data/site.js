@@ -5,7 +5,6 @@ export const site = {
   contactName: 'Danh Lý',
   phoneDisplay: '0384 038 453',
   phoneTel: 'tel:0384038453',
-  phoneRaw: '0384038453',
   address: 'Khu phố 9, Phú Quốc, An Giang, Việt Nam',
   facebook: 'https://www.facebook.com/PhotographerPhuQuocs',
   maps: 'https://maps.app.goo.gl/zT888PU8bKJ9nmje8',

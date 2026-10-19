@@ -131,6 +131,4 @@ export const src = (id, width) => `${base}/${id}-${width}.webp`;
 
 export const srcSet = (photo) => photo.widths.map((w) => `${src(photo.id, w)} ${w}w`).join(', ');
 
-export const largest = (photo) => src(photo.id, photo.widths[photo.widths.length - 1]);
-
 export const categories = ['featured', 'wedding', 'couples', 'family', 'portraits', 'resort'];
